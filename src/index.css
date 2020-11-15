@@ -1,3 +1,23 @@
+:root {
+
+  /* Colors */
+  --ScissorsGradient1: hsl(39, 89%, 49%);
+  --ScissorsGradient2: hsl(40, 84%, 53%);
+  --PaperGradient1: hsl(230, 89%, 62%);
+  --PaperGradient2: hsl(230, 89%, 65%);
+  --RockGradient1: hsl(349, 71%, 52%);
+  --RockGradient2: hsl(349, 70%, 56%);
+  --LizardGradient1: hsl(261, 73%, 60%);
+  --LizardGradient2: hsl(261, 72%, 63%);
+  --CyanGradient1: hsl(189, 59%, 53%);
+  --CyanGradient2: hsl(189, 58%, 57%);
+  --DarkText: hsl(229, 25%, 31%);
+  --ScoreText: hsl(229, 64%, 46%);
+  --HeaderOutline: hsl(217, 16%, 45%);
+  --RadialGradient1: hsl(214, 47%, 23%);
+  --RadialGradient2: hsl(237, 49%, 15%);
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -5,5 +25,5 @@
 }
 
 body {
-  background-color: green
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
