@@ -26,4 +26,5 @@
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: var(--CyanGradient1);
 }
