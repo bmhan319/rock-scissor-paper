@@ -1,0 +1,49 @@
+.scoreHeader {
+  margin: 32px;
+  border-radius: 8px;
+  border: 3px solid var(--HeaderOutline);
+  box-shadow: 0 0 3px 1px var(--HeaderOutline);
+  display: flex;
+  justify-content: space-between;
+}
+
+.scoreHeaderInnerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.scoreHeaderInnerContainer ul {
+  list-style: none; 
+}
+
+.scoreHeaderTextContainer {
+  padding: 0 20px;
+}
+
+.scoreHeaderText {
+  color: #fff;
+  line-height: 10px;
+  font-size: .8em;
+  font-weight: 600;
+}
+
+.scoreHeaderScoreContainer {
+  border-radius: 6px;
+  background-color: #fff;
+  margin: 12px;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.scoreHeaderScoreTitle {
+  color: var(--ScoreText);
+  font-size: .65em;
+  letter-spacing: 2px;
+}
+
+.scoreHeaderScore {
+  color: var(--DarkText);
+  font-size: 2.3em;
+  font-weight: 700;
+  line-height: 36px;
+}
