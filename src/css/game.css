@@ -1,0 +1,9 @@
+.gameComponent {
+  margin-top: 150px;
+  background-image: url('../img/bg-pentagon.svg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
