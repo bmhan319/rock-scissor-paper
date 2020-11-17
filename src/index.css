@@ -26,5 +26,7 @@
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  background-color: var(--CyanGradient1);
+  background-image: linear-gradient(var(--RadialGradient1), var(--RadialGradient2));
+  background-repeat: no-repeat;
+  height: 100vh;
 }
