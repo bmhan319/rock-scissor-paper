@@ -1,8 +1,8 @@
 .scoreHeader {
-  margin: 32px;
+  margin: 0 32px;
   border-radius: 8px;
   border: 3px solid var(--HeaderOutline);
-  box-shadow: 0 0 3px 1px var(--HeaderOutline);
+  box-shadow: 0 0 3px 0px var(--HeaderOutline);
   display: flex;
   justify-content: space-between;
 }
@@ -30,8 +30,8 @@
 .scoreHeaderScoreContainer {
   border-radius: 6px;
   background-color: #fff;
-  margin: 12px;
-  padding: 12px 20px;
+  margin: 10px;
+  padding: 11px 20px;
   text-align: center;
 }
 
