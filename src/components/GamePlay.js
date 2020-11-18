@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import {NavLink} from 'react-router-dom'
 
 export default class GamePlay extends Component {
   loadItems = () => {
     this.loadPlayerMove()
-    setTimeout( this.loadComputerMove,1000 )
-    setTimeout( this.props.findWinner, 2000)
+    setTimeout( this.loadComputerMove,500 )
+    setTimeout( this.props.findWinner, 1000)
   }
 
   loadPlayerMove = () => {
@@ -63,6 +64,17 @@ export default class GamePlay extends Component {
               </div>
             </div>
             <p className="itemPickedText">THE HOUSE PICKED</p>
+          </div>
+        </div>
+
+        <div className="resultsContainer resultsHide">
+          <div className="winnerContainer">
+            <h2 className="whoWon">{this.props.state.status}</h2>
+          </div>
+          <div className="playAgainContainer">
+            <NavLink to="/">
+              <button className="playAgain" type="button">PLAY AGAIN</button>
+            </NavLink>
           </div>
         </div>
       </div>

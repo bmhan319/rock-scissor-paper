@@ -40,3 +40,38 @@
   text-align: center;
   padding-top: 32px;
 }
+
+.resultsContainer {
+  margin-top: 100px;
+}
+
+.resultsHide {
+  display: none;
+}
+
+.resultsShow {
+  display: block;
+}
+
+.winnerContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.whoWon {
+  color: #fff;
+  font-size: 3.5em;
+}
+
+.playAgainContainer {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.playAgain {
+  width: 240px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 1em;
+
+}

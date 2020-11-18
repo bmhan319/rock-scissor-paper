@@ -18,6 +18,7 @@ export default class App extends Component {
     modalOpen: false,
     playerPick: "",
     computerPick: "",
+    status: "",
     score: 0,
     gameMode: 3
   }
@@ -56,20 +57,25 @@ export default class App extends Component {
     if (  (this.state.playerPick === "paper" && this.state.computerPick === "scissor") ||
           (this.state.playerPick === "scissor" && this.state.computerPick === "rock") ||
           (this.state.playerPick === "rock" && this.state.computerPick === "paper") ) {
-      console.log("you lose")
       this.setState({
-        score: this.state.score - 1
+        score: this.state.score - 1,
+        status: "YOU LOSE"
       })
     } else if ( (this.state.playerPick === "paper" && this.state.computerPick === "rock") ||
                 (this.state.playerPick === "scissor" && this.state.computerPick === "paper") ||
                 (this.state.playerPick === "rock" && this.state.computerPick === "scissor") ) {
-      console.log("you win")
       this.setState({
-        score: this.state.score + 1
+        score: this.state.score + 1,
+        status: "YOU WIN"
       })
     } else {
-      console.log("tie")
+      this.setState({
+        status: "IT'S A TIE"
+      })
     }
+
+    document.querySelector('.resultsContainer').classList.remove('resultsHide')
+    document.querySelector('.resultsContainer').classList.add('resultsShow')
   }
 
   render() {
