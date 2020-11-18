@@ -4,7 +4,7 @@ import Header from './components/Header'
 import GameNormal from './components/GameNormal'
 import './css/mode.css'
 import './css/header.css'
-import './css/game.css'
+import './css/gameNormal.css'
 
 export default class App extends Component {
   render() {
