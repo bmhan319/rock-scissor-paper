@@ -1,0 +1,18 @@
+.rulesComponent {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.rulesButton {
+  background-color: transparent;
+  border: 2px solid var(--HeaderOutline);
+  border-radius: 10px;
+  width: 130px;
+  height: 42px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1em;
+}
