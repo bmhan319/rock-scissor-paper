@@ -13,25 +13,37 @@
   width: 132px;
   height: 132px;
   border-radius: 50%;
-  display: flex;
-  position: absolute;
   box-shadow: inset 0 -4px 1px 1px rgba(0,0,0,0.3);
+  display: flex;
+}
+
+.outerCirclePos {
+  position: absolute;
 }
 
 .paperCircle {
   background-image: linear-gradient(var(--PaperGradient1), var(--PaperGradient2));
+}
+
+.paperCirclePos {
   top: -45px;
   left: 32px;
 }
 
 .scissorsCircle {
   background-image: linear-gradient(var(--ScissorsGradient1), var(--ScissorsGradient2));
+}
+
+.scissorsCirclePos {
   top: -45px;
   right: 32px;
 }
 
 .rockCircle {
   background-image: linear-gradient(var(--RockGradient1), var(--RockGradient2));
+}
+
+.rockCirclePos {
   bottom: -35px;
   left: 50%;
   transform: translateX(-50%);
