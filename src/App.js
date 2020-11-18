@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Modal from './components/Modal'
 import GameMode from './components/GameMode'
 import Header from './components/Header'
@@ -56,15 +57,18 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Modal modal={this.modal} />
-        <GameMode />
-        <Header state={this.state}/>
-        <GameNormal playerPick={this.playerPick}/>
-        <GamePlay />
-        <Rules modal={this.modal} />
-
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Modal modal={this.modal} />
+          <GameMode />
+          <Header state={this.state}/>
+          <Switch>
+            <Route exact path='/' render={()=> <GameNormal playerPick={this.playerPick} />}/>
+            <Route path='/gameplay' component={GamePlay} />
+          </Switch>
+          <Rules modal={this.modal} />
+        </div>
+        </BrowserRouter>
     )
   }
 }
