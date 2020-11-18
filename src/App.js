@@ -3,11 +3,13 @@ import Modal from './components/Modal'
 import GameMode from './components/GameMode'
 import Header from './components/Header'
 import GameNormal from './components/GameNormal'
+import GamePlay from './components/GamePlay'
 import Rules from './components/Rules'
 import './css/modal.css'
 import './css/mode.css'
 import './css/header.css'
 import './css/gameNormal.css'
+import './css/gamePlay.css'
 import './css/rules.css'
 
 export default class App extends Component {
@@ -59,6 +61,7 @@ export default class App extends Component {
         <GameMode />
         <Header state={this.state}/>
         <GameNormal playerPick={this.playerPick}/>
+        <GamePlay />
         <Rules modal={this.modal} />
 
       </div>
