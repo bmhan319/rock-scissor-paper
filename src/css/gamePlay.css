@@ -21,9 +21,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.outerPlayerCircle {
+.outerComputerCircle {
   height: 132px;
   width: 132px;
   border-radius: 50%;

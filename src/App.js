@@ -50,9 +50,26 @@ export default class App extends Component {
     } else if (value === 3) {
       this.setState({computerPick: 'rock'})
     }
+  }
 
-    console.log(this.state.playerPick)
-    console.log(this.state.computerPick)
+  findWinner = () => {
+    if (  (this.state.playerPick === "paper" && this.state.computerPick === "scissor") ||
+          (this.state.playerPick === "scissor" && this.state.computerPick === "rock") ||
+          (this.state.playerPick === "rock" && this.state.computerPick === "paper") ) {
+      console.log("you lose")
+      this.setState({
+        score: this.state.score - 1
+      })
+    } else if ( (this.state.playerPick === "paper" && this.state.computerPick === "rock") ||
+                (this.state.playerPick === "scissor" && this.state.computerPick === "paper") ||
+                (this.state.playerPick === "rock" && this.state.computerPick === "scissor") ) {
+      console.log("you win")
+      this.setState({
+        score: this.state.score + 1
+      })
+    } else {
+      console.log("tie")
+    }
   }
 
   render() {
@@ -64,7 +81,8 @@ export default class App extends Component {
           <Header state={this.state}/>
           <Switch>
             <Route exact path='/' render={()=> <GameNormal playerPick={this.playerPick} />}/>
-            <Route path='/gameplay' component={GamePlay} />
+            <Route path='/gameplay' render={()=> <GamePlay state={this.state}
+                                                           findWinner={this.findWinner} />}/>
           </Switch>
           <Rules modal={this.modal} />
         </div>
