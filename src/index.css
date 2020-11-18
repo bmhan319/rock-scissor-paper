@@ -30,5 +30,4 @@ body {
   background-image: linear-gradient(var(--RadialGradient1), var(--RadialGradient2));
   background-repeat: no-repeat;
   height: 100vh;
-  padding-top: 32px;
 }
