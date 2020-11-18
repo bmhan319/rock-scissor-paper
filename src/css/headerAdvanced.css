@@ -22,8 +22,8 @@
 
 .scoreHeaderText {
   color: #fff;
-  line-height: 17px;
-  font-size: 1.35em;
+  line-height: 10px;
+  font-size: .8em;
   font-weight: 600;
 }
 
@@ -31,7 +31,7 @@
   border-radius: 6px;
   background-color: #fff;
   margin: 10px;
-  padding: 14px 24px;
+  padding: 11px 20px;
   text-align: center;
 }
 
@@ -43,7 +43,7 @@
 
 .scoreHeaderScore {
   color: var(--DarkText);
-  font-size: 2.5em;
+  font-size: 2.3em;
   font-weight: 700;
   line-height: 36px;
 }

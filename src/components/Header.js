@@ -8,8 +8,6 @@ export default function Header() {
           <li className="scoreHeaderText">ROCK</li>
           <li className="scoreHeaderText">PAPER</li>
           <li className="scoreHeaderText">SCISSORS</li>
-          <li className="scoreHeaderText">LIZARD</li>
-          <li className="scoreHeaderText">SPOCK</li>
         </ul>
       </div>
       <div className="scoreHeaderInnerContainer">
