@@ -6,6 +6,11 @@
   z-index: 10;
 }
 
+.modalContainer {
+  position: relative;
+  height: 100vh;
+}
+
 .modalOpen {
   display: block;
 }
@@ -35,5 +40,9 @@
 
 .modalCloseContainer {
   text-align: center;
-  padding-top: 150px;
+  position: absolute;
+  top: 89%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
 }

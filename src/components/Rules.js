@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Rules() {
+export default function Rules(props) {
   return (
     <div className="rulesComponent">
-      <button className="rulesButton" type="button">RULES</button>
+      <button onClick={props.modal} className="rulesButton" type="button">RULES</button>
     </div>
   )
 }

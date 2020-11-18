@@ -11,14 +11,37 @@ import './css/gameNormal.css'
 import './css/rules.css'
 
 export default class App extends Component {
+  state = {
+    modalOpen: false
+  }
+
+  modal = () => {
+    const modal = document.querySelector('.modalComponent')
+    if (this.state.modalOpen === false) {
+      modal.classList.remove('modalClose')
+      modal.classList.add('modalOpen')
+      this.setState({
+        modalOpen: true
+      })
+    } else {
+      modal.classList.remove('modalOpen')
+      modal.classList.add('modalClose')
+      this.setState({
+        modalOpen: false
+      })
+    }
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <Modal />
+        <Modal modal={this.modal} />
         <GameMode />
         <Header />
         <GameNormal />
-        <Rules />
+        <Rules modal={this.modal} />
 
       </div>
     )
