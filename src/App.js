@@ -12,7 +12,11 @@ import './css/rules.css'
 
 export default class App extends Component {
   state = {
-    modalOpen: false
+    modalOpen: false,
+    playerPick: "",
+    computerPick: "",
+    score: 0,
+    gameMode: 3
   }
 
   modal = () => {
@@ -32,15 +36,29 @@ export default class App extends Component {
     }
   }
 
+  playerPick = (item) => {
+    let value = Math.floor((Math.random() * this.state.gameMode) + 1)
 
+    this.setState({playerPick: item})
+    if (value === 1) {
+      this.setState({computerPick: 'paper'})
+    } else if (value === 2) {
+      this.setState({computerPick: 'scissor'})
+    } else if (value === 3) {
+      this.setState({computerPick: 'rock'})
+    }
+
+    console.log(this.state.playerPick)
+    console.log(this.state.computerPick)
+  }
 
   render() {
     return (
       <div className="App">
         <Modal modal={this.modal} />
         <GameMode />
-        <Header />
-        <GameNormal />
+        <Header state={this.state}/>
+        <GameNormal playerPick={this.playerPick}/>
         <Rules modal={this.modal} />
 
       </div>
