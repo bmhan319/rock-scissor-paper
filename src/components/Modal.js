@@ -14,7 +14,7 @@ export default function Modal(props) {
           <img className="modalRulesImg" src={rules} alt="rules" />
         </div>
 
-        <div className="modalCloseContainer">
+        <div className="modalCloseContainer" onClick={props.modal}>
           <img onClick={props.modal} className="modalCloseIcon" src={close} alt="close" />
         </div>
       </div>
