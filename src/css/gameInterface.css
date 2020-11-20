@@ -1,0 +1,87 @@
+.gamePlayOuterContainer {
+  margin-top: 90px;
+  width: 100%;
+  position: relative;
+}
+
+.gamePlayContainer {
+  width: 100%;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.playerPickContainer {
+  position: relative;
+}
+
+.computerPickContainer {
+  position: relative;
+}
+
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.outerComputerCircle {
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.1);
+}
+
+.itemPickedText {
+  color: #fff;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.playerResultsRingContainer {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+  top: -84px;
+  left: -84px;
+  z-index: -10;
+}
+
+.ringsOff {
+  opacity: 0;
+}
+
+.ringsOn {
+  opacity: 1;
+}
+
+.playerResultsRings {
+  background-color: var(--HeaderOutline);
+  opacity: .1;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.playerResultsOuterRing {
+  width: 284px;
+  height: 284px;
+  z-index: -9;
+}
+
+.playerResultsMidRing {
+  width: 218px;
+  height: 218px;
+  z-index: -8;
+}
+
+.playerResultsInnerRing {
+  width: 162px;
+  height: 162px;
+  z-index: -7;
+}

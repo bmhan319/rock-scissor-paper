@@ -12,6 +12,7 @@ import './css/headerAdvanced.css'
 import './css/gameNormal.css'
 import './css/gameAdvanced.css'
 import './css/gamePlay.css'
+import './css/gameInterface.css'
 import './css/rules.css'
 
 export default class App extends Component {
@@ -56,7 +57,7 @@ export default class App extends Component {
     
     //This sets player's item into state
     this.setState({playerPick: item})
-    
+
     switch (value) {
       default:
         this.setState({computerPick: ''})
