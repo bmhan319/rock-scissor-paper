@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom'
 import HeaderAdvanced from './HeaderAdvanced'
+import ModalAdvanced from './ModalAdvanced'
+import Rules from './Rules'
 
 export default class GamePlay extends Component {
   loadItems = () => {
@@ -61,6 +63,7 @@ export default class GamePlay extends Component {
   render() {
     return (
       <div className="gamePlayComponentAdv">
+        <ModalAdvanced modal={this.props.modal} />
         <HeaderAdvanced state={this.props.state}/>
         <div className="gamePlayOuterContainerAdv">
           <div className="gamePlayContainerAdv">
@@ -100,6 +103,7 @@ export default class GamePlay extends Component {
             </NavLink>
           </div>
         </div>
+        <Rules modal={this.props.modal} />
       </div>
     )
   }

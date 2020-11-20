@@ -5,9 +5,6 @@ import GameNormal from './components/GameNormal'
 import GameAdvanced from './components/GameAdvanced'
 import GamePlay from './components/GamePlay'
 import GamePlayAdvanced from './components/GamePlayAdvanced'
-
-
-
 import './css/mode.css'
 import './css/modal.css'
 import './css/header.css'
@@ -28,6 +25,7 @@ export default class App extends Component {
     gameMode: 3
   }
 
+  // Opens and closes the Rules modal
   modal = () => {
     const modal = document.querySelector('.modalComponent')
     if (this.state.modalOpen === false) {
@@ -45,17 +43,22 @@ export default class App extends Component {
     }
   }
 
+  //Sets the game mode to normal or advanced by having the parameter be either 3 or 5
   changeGameMode = (num) => {
     this.setState({
       gameMode: num
     })
   }
 
+  //Records player and computers chosen items into state 
   playerPick = (item) => {
+    //Randomly picks a number between 1 and 3 (or 5 if in advanced mode)
     let value = Math.floor((Math.random() * this.state.gameMode) + 1)
-
+    
+    //This sets player's item into state
     this.setState({playerPick: item})
 
+    //This sets computer's item into state depending on the random value from above
     if (value === 1) {
       this.setState({computerPick: 'paper'})
     } else if (value === 2) {
@@ -138,9 +141,11 @@ export default class App extends Component {
                                                                          state={this.state}
                                                                          modal={this.modal} />}/>
             <Route path='/gameplay' render={()=> <GamePlay state={this.state}
-                                                           findWinner={this.findWinner} />}/>
+                                                           findWinner={this.findWinner}
+                                                           modal={this.modal} />}/>
             <Route path='/gameplayAdvanced' render={()=> <GamePlayAdvanced state={this.state}
-                                                           findWinnerAdv={this.findWinnerAdv} />}/>
+                                                           findWinnerAdv={this.findWinnerAdv}
+                                                           modal={this.modal} />}/>
           </Switch>
           
         </div>
