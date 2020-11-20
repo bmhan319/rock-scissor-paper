@@ -54,6 +54,8 @@ export default class App extends Component {
   }
 
   findWinner = () => {
+    document.querySelector('.playerResultsRingContainer').classList.remove('ringsOff')
+    document.querySelector('.playerResultsRingContainer').classList.add('ringsOn')
     if (  (this.state.playerPick === "paper" && this.state.computerPick === "scissor") ||
           (this.state.playerPick === "scissor" && this.state.computerPick === "rock") ||
           (this.state.playerPick === "rock" && this.state.computerPick === "paper") ) {
