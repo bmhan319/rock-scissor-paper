@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom'
-import Header from './Header'
 
 export default class GamePlay extends Component {
   loadItems = () => {
@@ -49,32 +48,29 @@ export default class GamePlay extends Component {
   render() {
     return (
       <div className="gamePlayComponent">
-        <Header state={this.props.state}/>
-        <div className="gamePlayOuterContainer">
-          <div className="gamePlayContainer">
-            <div className="playerPickContainer">
-              <div className="itemContainer">
-                <div className="outerPlayerCircle">
-                  <div className="innerPlayerCircle"></div>
-                </div>
+        <div className="gamePlayContainer">
+          <div className="playerPickContainer">
+            <div className="itemContainer">
+              <div className="outerPlayerCircle">
+                <div className="innerPlayerCircle"></div>
               </div>
-              <p className="itemPickedText">YOU PICKED</p>
-
-              <div className="playerResultsRingContainer ringsOff">
-                <div className="playerResultsRings playerResultsOuterRing"></div>
-                <div className="playerResultsRings playerResultsMidRing"></div>
-                <div className="playerResultsRings playerResultsInnerRing"></div> 
-              </div>
-
             </div>
-            <div className="computerPickContainer">
-              <div className="itemContainer">
-                <div className="outerComputerCircle">
-                  <div className="innerComputerCircle"></div>
-                </div>
-              </div>
-              <p className="itemPickedText">THE HOUSE PICKED</p>
+            <p className="itemPickedText">YOU PICKED</p>
+
+            <div className="playerResultsRingContainer ringsOff">
+              <div className="playerResultsRings playerResultsOuterRing"></div>
+              <div className="playerResultsRings playerResultsMidRing"></div>
+              <div className="playerResultsRings playerResultsInnerRing"></div> 
             </div>
+
+          </div>
+          <div className="computerPickContainer">
+            <div className="itemContainer">
+              <div className="outerComputerCircle">
+                <div className="innerComputerCircle"></div>
+              </div>
+            </div>
+            <p className="itemPickedText">THE HOUSE PICKED</p>
           </div>
         </div>
 

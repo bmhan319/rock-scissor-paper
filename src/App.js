@@ -2,14 +2,15 @@ import React, { Component } from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Modal from './components/Modal'
 import GameMode from './components/GameMode'
-import Header from './components/Header'
 import GameNormal from './components/GameNormal'
+import GameAdvanced from './components/GameAdvanced'
 import GamePlay from './components/GamePlay'
 import Rules from './components/Rules'
 import './css/modal.css'
 import './css/mode.css'
 import './css/header.css'
 import './css/gameNormal.css'
+import './css/gameAdvanced.css'
 import './css/gamePlay.css'
 import './css/rules.css'
 
@@ -56,6 +57,8 @@ export default class App extends Component {
   findWinner = () => {
     document.querySelector('.playerResultsRingContainer').classList.remove('ringsOff')
     document.querySelector('.playerResultsRingContainer').classList.add('ringsOn')
+    document.querySelector('.resultsContainer').classList.remove('resultsHide')
+    document.querySelector('.resultsContainer').classList.add('resultsShow')
     if (  (this.state.playerPick === "paper" && this.state.computerPick === "scissor") ||
           (this.state.playerPick === "scissor" && this.state.computerPick === "rock") ||
           (this.state.playerPick === "rock" && this.state.computerPick === "paper") ) {
@@ -75,9 +78,6 @@ export default class App extends Component {
         status: "IT'S A TIE"
       })
     }
-
-    document.querySelector('.resultsContainer').classList.remove('resultsHide')
-    document.querySelector('.resultsContainer').classList.add('resultsShow')
   }
 
   render() {
@@ -86,9 +86,10 @@ export default class App extends Component {
         <div className="App">
           <Modal modal={this.modal} />
           <GameMode />
-          <Header state={this.state}/>
           <Switch>
-            <Route exact path='/' render={()=> <GameNormal playerPick={this.playerPick} />}/>
+            <Route exact path='/' render={()=> <GameNormal playerPick={this.playerPick}
+                                                           state={this.state} />}/>
+            <Route exact path='/advancedMode' render={()=> <GameAdvanced playerPick={this.playerPick} />}/>
             <Route path='/gameplay' render={()=> <GamePlay state={this.state}
                                                            findWinner={this.findWinner} />}/>
           </Switch>
