@@ -10,7 +10,6 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-
 }
 
 .playerPickContainer {
@@ -26,6 +25,13 @@
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.itemContainerPlayer {
+  border: 2px solid red;
+  border-radius: 50%;
+  height: 162px;
+  width: 162px;
 }
 
 .outerComputerCircle {
@@ -78,4 +84,50 @@
   letter-spacing: 1px;
   color: var(--DarkText);
   cursor: pointer;
+}
+
+.playerResultsRingContainer {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+  top: -84px;
+  left: -84px;
+  z-index: -10;
+}
+
+.ringsOff {
+  opacity: 0;
+}
+
+.ringsOn {
+  opacity: 1;
+}
+
+.playerResultsRings {
+  background-color: var(--HeaderOutline);
+  opacity: .1;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.playerResultsOuterRing {
+  width: 284px;
+  height: 284px;
+  z-index: -9;
+}
+
+.playerResultsMidRing {
+  width: 218px;
+  height: 218px;
+  z-index: -8;
+}
+
+.playerResultsInnerRing {
+  width: 162px;
+  height: 162px;
+  z-index: -7;
 }

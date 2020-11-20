@@ -56,6 +56,13 @@ export default class GamePlay extends Component {
               </div>
             </div>
             <p className="itemPickedText">YOU PICKED</p>
+
+            <div className="playerResultsRingContainer ringsOff">
+              <div className="playerResultsRings playerResultsOuterRing"></div>
+              <div className="playerResultsRings playerResultsMidRing"></div>
+              <div className="playerResultsRings playerResultsInnerRing"></div> 
+            </div>
+
           </div>
           <div className="computerPickContainer">
             <div className="itemContainer">
