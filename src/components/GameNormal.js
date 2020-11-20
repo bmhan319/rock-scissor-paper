@@ -1,10 +1,13 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import Header from './Header'
+import Modal from './Modal'
+import Rules from './Rules'
 
 export default function GameNormal(props) {
   return (
     <div className="gameComponent">
+      <Modal modal={props.modal} />
       <Header state={props.state}/>
       <div className="gameContainer">
         <NavLink to="/gameplay">
@@ -24,6 +27,7 @@ export default function GameNormal(props) {
           </div>
         </NavLink>
       </div>
+      <Rules modal={props.modal} />
     </div>
   )
 }

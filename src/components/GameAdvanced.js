@@ -1,10 +1,13 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 import HeaderAdvanced from './HeaderAdvanced'
+import ModalAdvanced from './ModalAdvanced'
+import Rules from './Rules'
 
 export default function GameAdvanced(props) {
   return (
     <div className="gameComponentAdv">
+      <ModalAdvanced modal={props.modal} />
       <HeaderAdvanced state={props.state}/>
       <div className="gameContainerAdv">
         <NavLink to="/gameplayAdvanced">
@@ -34,6 +37,7 @@ export default function GameAdvanced(props) {
           </div>
         </NavLink>
       </div>
+      <Rules modal={props.modal} />
     </div>
   )
 }

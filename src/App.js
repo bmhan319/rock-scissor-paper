@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import Modal from './components/Modal'
 import GameMode from './components/GameMode'
 import GameNormal from './components/GameNormal'
 import GameAdvanced from './components/GameAdvanced'
 import GamePlay from './components/GamePlay'
 import GamePlayAdvanced from './components/GamePlayAdvanced'
-import Rules from './components/Rules'
-import './css/modal.css'
+
+
+
 import './css/mode.css'
+import './css/modal.css'
 import './css/header.css'
 import './css/headerAdvanced.css'
 import './css/gameNormal.css'
@@ -128,19 +129,20 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Modal modal={this.modal} />
           <GameMode changeGameMode={this.changeGameMode} />
           <Switch>
             <Route exact path='/' render={()=> <GameNormal playerPick={this.playerPick}
-                                                           state={this.state} />}/>
+                                                           state={this.state}
+                                                           modal={this.modal} />}/>
             <Route exact path='/advancedMode' render={()=> <GameAdvanced playerPick={this.playerPick}
-                                                                         state={this.state} />}/>
+                                                                         state={this.state}
+                                                                         modal={this.modal} />}/>
             <Route path='/gameplay' render={()=> <GamePlay state={this.state}
                                                            findWinner={this.findWinner} />}/>
             <Route path='/gameplayAdvanced' render={()=> <GamePlayAdvanced state={this.state}
                                                            findWinnerAdv={this.findWinnerAdv} />}/>
           </Switch>
-          <Rules modal={this.modal} />
+          
         </div>
         </BrowserRouter>
     )
