@@ -68,21 +68,25 @@ export default class App extends Component {
     }
   }
 
-  findWinner = () => {
-    document.querySelector('.playerResultsRingContainer').classList.remove('ringsOff')
-    document.querySelector('.playerResultsRingContainer').classList.add('ringsOn')
-    document.querySelector('.resultsContainer').classList.remove('resultsHide')
-    document.querySelector('.resultsContainer').classList.add('resultsShow')
-    if (  (this.state.playerPick === "paper" && this.state.computerPick === "scissor") ||
-          (this.state.playerPick === "scissor" && this.state.computerPick === "rock") ||
-          (this.state.playerPick === "rock" && this.state.computerPick === "paper") ) {
+  findWinnerAdv = () => {
+    document.querySelector('.playerResultsRingContainerAdv').classList.remove('ringsOffAdv')
+    document.querySelector('.playerResultsRingContainerAdv').classList.add('ringsOnAdv')
+    document.querySelector('.resultsContainerAdv').classList.remove('resultsHideAdv')
+    document.querySelector('.resultsContainerAdv').classList.add('resultsShowAdv')
+    if (  (this.state.playerPick === "paper" && (this.state.computerPick === "scissor" || this.state.computerPick === "lizard") ) ||
+          (this.state.playerPick === "scissor" && (this.state.computerPick === "spock" || this.state.computerPick === "rock") ) ||
+          (this.state.playerPick === "rock" && (this.state.computerPick === "paper" || this.state.computerPick === "spock") ) ||
+          (this.state.playerPick === "lizard" && (this.state.computerPick === "rock" || this.state.computerPick === "scissor") ) ||
+          (this.state.playerPick === "spock" && (this.state.computerPick === "lizard" || this.state.computerPick === "paper") ) ) {
       this.setState({
         score: this.state.score - 1,
         status: "YOU LOSE"
       })
-    } else if ( (this.state.playerPick === "paper" && this.state.computerPick === "rock") ||
-                (this.state.playerPick === "scissor" && this.state.computerPick === "paper") ||
-                (this.state.playerPick === "rock" && this.state.computerPick === "scissor") ) {
+    } else if ( (this.state.playerPick === "paper" && (this.state.computerPick === "rock" || this.state.computerPick === "spock") ) ||
+                (this.state.playerPick === "scissor" && (this.state.computerPick === "paper" || this.state.computerPick === "lizard") ) ||
+                (this.state.playerPick === "rock" && (this.state.computerPick === "lizard"|| this.state.computerPick === "scissor") ) || 
+                (this.state.playerPick === "lizard" && (this.state.computerPick === "spock"|| this.state.computerPick === "paper") ) || 
+                (this.state.playerPick === "spock" && (this.state.computerPick === "scissor"|| this.state.computerPick === "rock") ) ) {
       this.setState({
         score: this.state.score + 1,
         status: "YOU WIN"
@@ -94,11 +98,11 @@ export default class App extends Component {
     }
   }
 
-  findWinnerAdv = () => {
-    document.querySelector('.playerResultsRingContainerAdv').classList.remove('ringsOffAdv')
-    document.querySelector('.playerResultsRingContainerAdv').classList.add('ringsOnAdv')
-    document.querySelector('.resultsContainerAdv').classList.remove('resultsHideAdv')
-    document.querySelector('.resultsContainerAdv').classList.add('resultsShowAdv')
+  findWinner = () => {
+    document.querySelector('.playerResultsRingContainer').classList.remove('ringsOff')
+    document.querySelector('.playerResultsRingContainer').classList.add('ringsOn')
+    document.querySelector('.resultsContainer').classList.remove('resultsHide')
+    document.querySelector('.resultsContainer').classList.add('resultsShow')
     if (  (this.state.playerPick === "paper" && this.state.computerPick === "scissor") ||
           (this.state.playerPick === "scissor" && this.state.computerPick === "rock") ||
           (this.state.playerPick === "rock" && this.state.computerPick === "paper") ) {
