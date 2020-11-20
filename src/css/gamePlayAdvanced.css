@@ -1,10 +1,14 @@
-.gamePlayComponent {
+.gamePlayComponentAdv {
+  margin-top: 0px;
+}
+
+.gamePlayOuterContainerAdv {
   margin-top: 90px;
   width: 100%;
   position: relative;
 }
 
-.gamePlayContainer {
+.gamePlayContainerAdv {
   width: 100%;
   padding: 0 32px;
   display: flex;
@@ -12,70 +16,70 @@
   position: relative;
 }
 
-.playerPickContainer {
+.playerPickContainerAdv {
   position: relative;
 }
 
-.computerPickContainer {
+.computerPickContainerAdv {
   position: relative;
 }
 
-.itemContainer {
+.itemContainerAdv {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.itemContainerPlayer {
-  border: 2px solid red;
+.itemContainerPlayerAdv {
   border-radius: 50%;
   height: 162px;
   width: 162px;
+  border: 2px solid yellow;
 }
 
-.outerComputerCircle {
+.outerComputerCircleAdv {
   height: 132px;
   width: 132px;
   border-radius: 50%;
   background-color: rgba(0,0,0,.1);
 }
 
-.itemPickedText {
+.itemPickedTextAdv {
   color: #fff;
   text-align: center;
   padding-top: 32px;
 }
 
-.resultsContainer {
+.resultsContainerAdv {
   margin-top: 60px;
 }
 
-.resultsHide {
+.resultsHideAdv {
   display: none;
 }
 
-.resultsShow {
+.resultsShowAdv {
   display: block;
 }
 
-.winnerContainer {
+.winnerContainerAdv {
   width: 100%;
   text-align: center;
 }
 
-.whoWon {
+.whoWonAdv {
   color: #fff;
   font-size: 3.5em;
   letter-spacing: 2px;
 }
 
-.playAgainContainer {
+.playAgainContainerAdv {
   margin-top: 16px;
   text-align: center;
 }
 
-.playAgain {
+.playAgainAdv {
   width: 230px;
   height: 50px;
   border-radius: 10px;
@@ -86,7 +90,7 @@
   cursor: pointer;
 }
 
-.playerResultsRingContainer {
+.playerResultsRingContainerAdv {
   width: 300px;
   height: 300px;
   position: absolute;
@@ -96,15 +100,15 @@
   z-index: -10;
 }
 
-.ringsOff {
+.ringsOffAdv {
   opacity: 0;
 }
 
-.ringsOn {
+.ringsOnAdv {
   opacity: 1;
 }
 
-.playerResultsRings {
+.playerResultsRingsAdv {
   background-color: var(--HeaderOutline);
   opacity: .1;
   position: absolute;
@@ -114,19 +118,19 @@
   transform: translate(-50%, -50%);
 }
 
-.playerResultsOuterRing {
+.playerResultsOuterRingAdv {
   width: 284px;
   height: 284px;
   z-index: -9;
 }
 
-.playerResultsMidRing {
+.playerResultsMidRingAdv {
   width: 218px;
   height: 218px;
   z-index: -8;
 }
 
-.playerResultsInnerRing {
+.playerResultsInnerRingAdv {
   width: 162px;
   height: 162px;
   z-index: -7;

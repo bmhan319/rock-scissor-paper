@@ -1,5 +1,5 @@
 .gamePlayComponent {
-  
+  margin-top: 0px;
 }
 
 .gamePlayOuterContainer {
@@ -32,7 +32,6 @@
 }
 
 .itemContainerPlayer {
-  border: 2px solid red;
   border-radius: 50%;
   height: 162px;
   width: 162px;

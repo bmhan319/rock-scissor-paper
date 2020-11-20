@@ -1,4 +1,4 @@
-.scoreHeader {
+.scoreHeaderAdv {
   margin: 0 32px;
   border-radius: 8px;
   border: 3px solid var(--HeaderOutline);
@@ -7,27 +7,27 @@
   justify-content: space-between;
 }
 
-.scoreHeaderInnerContainer {
+.scoreHeaderInnerContainerAdv {
   display: flex;
   align-items: center;
 }
 
-.scoreHeaderInnerContainer ul {
+.scoreHeaderInnerContainerAdv ul {
   list-style: none; 
 }
 
-.scoreHeaderTextContainer {
+.scoreHeaderTextContainerAdv {
   padding: 0 20px;
 }
 
-.scoreHeaderText {
+.scoreHeaderTextAdv {
   color: #fff;
   line-height: 10px;
   font-size: .8em;
   font-weight: 600;
 }
 
-.scoreHeaderScoreContainer {
+.scoreHeaderScoreContainerAdv {
   border-radius: 6px;
   background-color: #fff;
   margin: 10px;
@@ -35,13 +35,13 @@
   text-align: center;
 }
 
-.scoreHeaderScoreTitle {
+.scoreHeaderScoreTitleAdv {
   color: var(--ScoreText);
   font-size: .65em;
   letter-spacing: 2px;
 }
 
-.scoreHeaderScore {
+.scoreHeaderScoreAdv {
   color: var(--DarkText);
   font-size: 2.3em;
   font-weight: 700;

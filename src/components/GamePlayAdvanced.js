@@ -1,41 +1,54 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom'
+import HeaderAdvanced from './HeaderAdvanced'
 
 export default class GamePlay extends Component {
   loadItems = () => {
     this.loadPlayerMove()
     setTimeout( this.loadComputerMove,500 )
-    setTimeout( this.props.findWinner, 1000)
+    setTimeout( this.props.findWinnerAdv, 1000)
   }
 
   loadPlayerMove = () => {
-    document.querySelector('.outerPlayerCircle').classList.add('outerCircle')
-    document.querySelector('.innerPlayerCircle').classList.add('innerCircle')
+    document.querySelector('.outerPlayerCircleAdv').classList.add('outerCircle')
+    document.querySelector('.innerPlayerCircleAdv').classList.add('innerCircle')
 
     if (this.props.state.playerPick === "paper") {
-      document.querySelector('.outerPlayerCircle').classList.add('paperCircle')
-      document.querySelector('.innerPlayerCircle').classList.add('innerPaperCircle')
+      document.querySelector('.outerPlayerCircleAdv').classList.add('paperCircle')
+      document.querySelector('.innerPlayerCircleAdv').classList.add('innerPaperCircle')
     } else if (this.props.state.playerPick === "scissor") {
-      document.querySelector('.outerPlayerCircle').classList.add('scissorsCircle')
-      document.querySelector('.innerPlayerCircle').classList.add('innerScissorCircle')
+      document.querySelector('.outerPlayerCircleAdv').classList.add('scissorsCircle')
+      document.querySelector('.innerPlayerCircleAdv').classList.add('innerScissorCircle')
     } else if (this.props.state.playerPick === "rock") {
-      document.querySelector('.outerPlayerCircle').classList.add('rockCircle')
-      document.querySelector('.innerPlayerCircle').classList.add('innerRockCircle')
+      document.querySelector('.outerPlayerCircleAdv').classList.add('rockCircle')
+      document.querySelector('.innerPlayerCircleAdv').classList.add('innerRockCircle')
+    } else if (this.props.state.playerPick === "lizard") {
+      document.querySelector('.outerPlayerCircleAdv').classList.add('lizardCircleAdv')
+      document.querySelector('.innerPlayerCircleAdv').classList.add('innerLizardCircleAdv')
+    } else if (this.props.state.playerPick === "spock") {
+      document.querySelector('.outerPlayerCircleAdv').classList.add('spockCircleAdv')
+      document.querySelector('.innerPlayerCircleAdv').classList.add('innerSpockCircleAdv')
     }
   }
 
   loadComputerMove = () => {
-    document.querySelector('.outerComputerCircle').classList.add('outerCircle')
-    document.querySelector('.innerComputerCircle').classList.add('innerCircle')
+    document.querySelector('.outerComputerCircleAdv').classList.add('outerCircle')
+    document.querySelector('.innerComputerCircleAdv').classList.add('innerCircle')
     if (this.props.state.computerPick === "paper") {
-      document.querySelector('.outerComputerCircle').classList.add('paperCircle')
-      document.querySelector('.innerComputerCircle').classList.add('innerPaperCircle')
+      document.querySelector('.outerComputerCircleAdv').classList.add('paperCircle')
+      document.querySelector('.innerComputerCircleAdv').classList.add('innerPaperCircle')
     } else if (this.props.state.computerPick === "scissor") {
-      document.querySelector('.outerComputerCircle').classList.add('scissorsCircle')
-      document.querySelector('.innerComputerCircle').classList.add('innerScissorCircle')
+      document.querySelector('.outerComputerCircleAdv').classList.add('scissorsCircle')
+      document.querySelector('.innerComputerCircleAdv').classList.add('innerScissorCircle')
     } else if (this.props.state.computerPick === "rock") {
-      document.querySelector('.outerComputerCircle').classList.add('rockCircle')
-      document.querySelector('.innerComputerCircle').classList.add('innerRockCircle')
+      document.querySelector('.outerComputerCircleAdv').classList.add('rockCircle')
+      document.querySelector('.innerComputerCircleAdv').classList.add('innerRockCircle')
+    } else if (this.props.state.computerPick === "lizard") {
+      document.querySelector('.outerComputerCircleAdv').classList.add('lizardCircleAdv')
+      document.querySelector('.innerComputerCircleAdv').classList.add('innerLizardCircleAdv')
+    } else if (this.props.state.computerPick === "spock") {
+      document.querySelector('.outerComputerCircleAdv').classList.add('spockCircleAdv')
+      document.querySelector('.innerComputerCircleAdv').classList.add('innerSpockCircleAdv')
     }
   }
 
@@ -47,40 +60,43 @@ export default class GamePlay extends Component {
 
   render() {
     return (
-      <div className="gamePlayComponent">
-        <div className="gamePlayContainer">
-          <div className="playerPickContainer">
-            <div className="itemContainer">
-              <div className="outerPlayerCircle">
-                <div className="innerPlayerCircle"></div>
+      <div className="gamePlayComponentAdv">
+        <HeaderAdvanced state={this.props.state}/>
+        <div className="gamePlayOuterContainerAdv">
+          <div className="gamePlayContainerAdv">
+            <div className="playerPickContainerAdv">
+              <div className="itemContainerAdv">
+                <div className="outerPlayerCircleAdv">
+                  <div className="innerPlayerCircleAdv"></div>
+                </div>
               </div>
-            </div>
-            <p className="itemPickedText">YOU PICKED</p>
+              <p className="itemPickedTextAdv">YOU PICKED</p>
 
-            <div className="playerResultsRingContainer ringsOff">
-              <div className="playerResultsRings playerResultsOuterRing"></div>
-              <div className="playerResultsRings playerResultsMidRing"></div>
-              <div className="playerResultsRings playerResultsInnerRing"></div> 
-            </div>
-
-          </div>
-          <div className="computerPickContainer">
-            <div className="itemContainer">
-              <div className="outerComputerCircle">
-                <div className="innerComputerCircle"></div>
+              <div className="playerResultsRingContainerAdv ringsOffAdv">
+                <div className="playerResultsRingsAdv playerResultsOuterRingAdv"></div>
+                <div className="playerResultsRingsAdv playerResultsMidRingAdv"></div>
+                <div className="playerResultsRingsAdv playerResultsInnerRingAdv"></div> 
               </div>
+
             </div>
-            <p className="itemPickedText">THE HOUSE PICKED</p>
+            <div className="computerPickContainerAdv">
+              <div className="itemContainerAdv">
+                <div className="outerComputerCircleAdv">
+                  <div className="innerComputerCircleAdv"></div>
+                </div>
+              </div>
+              <p className="itemPickedTextAdv">THE HOUSE PICKED</p>
+            </div>
           </div>
         </div>
 
-        <div className="resultsContainer resultsHide">
-          <div className="winnerContainer">
-            <h2 className="whoWon">{this.props.state.status}</h2>
+        <div className="resultsContainerAdv resultsHideAdv">
+          <div className="winnerContainerAdv">
+            <h2 className="whoWonAdv">{this.props.state.status}</h2>
           </div>
-          <div className="playAgainContainer">
-            <NavLink to="/">
-              <button className="playAgain" type="button">PLAY AGAIN</button>
+          <div className="playAgainContainerAdv">
+            <NavLink to="/advancedMode">
+              <button className="playAgainAdv" type="button">PLAY AGAIN</button>
             </NavLink>
           </div>
         </div>
