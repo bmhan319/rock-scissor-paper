@@ -9,7 +9,7 @@ export default function GameNormal(props) {
     <div className="gameComponent">
       <Modal modal={props.modal} />
       <Header state={props.state}/>
-      <div className="gameContainer">
+      <div className="gameContainer bgTriangle">
         <NavLink to="/gameplay">
           <div onClick={()=>{props.playerPick('paper')}} className="outerCircle outerCirclePos paperCircle paperCirclePos">
             <div className="innerCircle innerPaperCircle"></div>

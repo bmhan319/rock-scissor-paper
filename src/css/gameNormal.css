@@ -1,12 +1,15 @@
 .gameContainer {
   margin-top: 90px;
-  background-image: url('../img/bg-triangle.svg');
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
   width: 100%;
   height: 300px;
   position: relative;
+}
+
+.bgTriangle {
+  background-image: url('../img/bg-triangle.svg');
 }
 
 .outerCircle {
@@ -25,22 +28,22 @@
   background-image: linear-gradient(var(--PaperGradient1), var(--PaperGradient2));
 }
 
+.scissorsCircle {
+  background-image: linear-gradient(var(--ScissorsGradient1), var(--ScissorsGradient2));
+}
+
+.rockCircle {
+  background-image: linear-gradient(var(--RockGradient1), var(--RockGradient2));
+}
+
 .paperCirclePos {
   top: 0;
   left: 32px;
 }
 
-.scissorsCircle {
-  background-image: linear-gradient(var(--ScissorsGradient1), var(--ScissorsGradient2));
-}
-
 .scissorsCirclePos {
   top: 0;
   right: 32px;
-}
-
-.rockCircle {
-  background-image: linear-gradient(var(--RockGradient1), var(--RockGradient2));
 }
 
 .rockCirclePos {

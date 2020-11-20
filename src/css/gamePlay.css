@@ -31,12 +31,6 @@
   position: relative;
 }
 
-.itemContainerPlayer {
-  border-radius: 50%;
-  height: 162px;
-  width: 162px;
-}
-
 .outerComputerCircle {
   height: 132px;
   width: 132px;
