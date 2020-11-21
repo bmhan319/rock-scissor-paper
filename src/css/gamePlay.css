@@ -43,6 +43,11 @@
   color: var(--RockGradient1);
 }
 
+.playAgain:focus {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--HeaderOutline);
+}
+
 @media (min-width: 400px) {
   .gamePlayComponent {
     width: 100%;

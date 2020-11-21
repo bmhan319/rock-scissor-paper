@@ -22,8 +22,8 @@ export default class GamePlay extends Component {
               <h2 className="whoWon">{this.props.state.status}</h2>
             </div>
             <div className="playAgainContainer">
-              <NavLink to="/">
-                <button className="playAgain" type="button">PLAY AGAIN</button>
+              <NavLink tabIndex="-1" to="/">
+                <button tabIndex="0" className="playAgain" type="button">PLAY AGAIN</button>
               </NavLink>
             </div>
           </div>

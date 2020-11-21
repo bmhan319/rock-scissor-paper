@@ -11,7 +11,7 @@ export default function GameNormal(props) {
       <div className="ModalWrapper ModalWrapperOff">
         <Header state={props.state}/>
         <div className="gameContainer bgTriangle">
-          <NavLink tabIndex="-1" to="/gameplay">
+          <NavLink tabIndex="-1" to="/gameplay" className="outerCircleLink">
             <div tabIndex="0"
                  onMouseDown={()=>{props.pressButton('.paperCircle', 'outerCirclePress')}} 
                  onClick={()=>{props.playersPick('paper')}} 
@@ -20,7 +20,7 @@ export default function GameNormal(props) {
             </div>
           </NavLink>
 
-          <NavLink tabIndex="-1" to="/gameplay">
+          <NavLink tabIndex="-1" to="/gameplay" className="outerCircleLink">
             <div tabIndex="0"
                  onMouseDown={()=>{props.pressButton('.scissorsCircle', 'outerCirclePress')}} 
                  onClick={()=>{props.playersPick('scissor')}} 
@@ -28,7 +28,7 @@ export default function GameNormal(props) {
               <div className="innerCircle innerScissorCircle"></div>
             </div>
           </NavLink>
-          <NavLink tabIndex="-1" to="/gameplay">
+          <NavLink tabIndex="-1" to="/gameplay" className="outerCircleLink">
             <div tabIndex="0"
                  onMouseDown={()=>{props.pressButton('.rockCircle', 'outerCirclePress')}} 
                  onClick={()=>{props.playersPick('rock')}} 
