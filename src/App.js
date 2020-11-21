@@ -63,6 +63,7 @@ export default class App extends Component {
   //Player pick circle animation
   pressButton = (element1, element2) => {
     document.querySelector(element1).classList.add(element2)
+    document.querySelector(element1).style.boxShadow = "none"
   }
 
   //Records player and computer's chosen items into state 
