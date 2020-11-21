@@ -20,6 +20,11 @@
   display: flex;
 }
 
+.outerCirclePress {
+  width: 130px;
+  height: 130px;
+}
+
 .outerCirclePos {
   position: absolute;
 }
@@ -100,6 +105,11 @@
     width: 204px;
     height: 204px;
     box-shadow: inset 0 -8px 1px 1px rgba(0,0,0,0.3);
+  }
+
+  .outerCirclePress {
+    width: 202px;
+    height: 202px;
   }
 
   .paperCirclePos {

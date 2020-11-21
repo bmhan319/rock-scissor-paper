@@ -18,6 +18,11 @@
   cursor: pointer;
 }
 
+.rulesButton:hover {
+  color: var(--RockGradient1);
+  border: 2px solid var(--RockGradient1);
+}
+
 @media (min-width: 400px) {
   .rulesComponent {
     top: auto;

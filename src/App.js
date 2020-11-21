@@ -60,6 +60,11 @@ export default class App extends Component {
     })
   }
 
+  //Player Pick Circle Animation
+  pressButton = (element) => {
+    document.querySelector(element).classList.add('outerCirclePress')
+  }
+
   //Records player and computer's chosen items into state 
   playersPick = (item) => {
     //Randomly picks a number between 1 and 3 (or 5 if in advanced mode)
@@ -218,9 +223,11 @@ export default class App extends Component {
           <Switch>
             <Route exact path='/' render={()=> <GameNormal state={this.state}
                                                            modal={this.modal}
+                                                           pressButton={this.pressButton}
                                                            playersPick={this.playersPick} />}/>
             <Route exact path='/advancedMode' render={()=> <GameAdvanced state={this.state}
                                                                          modal={this.modal} 
+                                                                         pressButton={this.pressButton}
                                                                          playersPick={this.playersPick} />}/>
             <Route path='/gameplay' render={()=> <GamePlay  state={this.state}
                                                             modal={this.modal}
