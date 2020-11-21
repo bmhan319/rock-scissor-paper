@@ -52,3 +52,48 @@
   cursor: pointer;
   width: 40px;
 }
+
+@media (min-width: 400px) {
+  .modalComponent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    height: 414px;
+    width: 400px;
+    border-radius: 14px;
+  }
+
+  .modalContainer {
+    position: relative;
+    height: 100%;
+  }
+
+  .modalTitleContainer {
+    padding: 30px 40px;
+    text-align: left;
+  }
+  
+  .modalTitle {
+    font-size: 2em;
+  }
+
+  .modalRulesContainer {
+    padding: 0 40px;
+    text-align: center;
+  }
+  
+  .modalRulesImg {
+    width: 100%;
+  }
+
+  .modalCloseContainer {
+    text-align: center;
+    top: 40px;
+    left: auto;
+    transform: translateX(0);
+    right: 40px;
+  }
+}

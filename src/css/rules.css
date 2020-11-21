@@ -17,3 +17,13 @@
   font-size: 1em;
   cursor: pointer;
 }
+
+@media (min-width: 400px) {
+  .rulesComponent {
+    top: auto;
+    bottom: 32px;
+    right: 32px;
+    transform: translateX(0);
+    text-align: end;
+  }
+}
