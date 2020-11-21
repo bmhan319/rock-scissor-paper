@@ -5,7 +5,7 @@ export default function ResultsInterface() {
     <div>
       <div className="gamePlayOuterContainer">
           <div className="gamePlayContainer">
-            <div className="playerPickContainer">
+            <div className="playersPickContainer playerPickContainer">
               <div className="itemContainer">
                 <div className="outerPlayerCircle">
                   <div className="innerPlayerCircle"></div>
@@ -13,14 +13,14 @@ export default function ResultsInterface() {
               </div>
               <p className="itemPickedText">YOU PICKED</p>
 
-              <div className="playerResultsRingContainer ringsOff">
+              <div className="resultsRingsContainer playerResultsRingContainer ringsOff">
                 <div className="playerResultsRings playerResultsOuterRing"></div>
                 <div className="playerResultsRings playerResultsMidRing"></div>
                 <div className="playerResultsRings playerResultsInnerRing"></div> 
               </div>
 
             </div>
-            <div className="computerPickContainer">
+            <div className="playersPickContainer computerPickContainer">
               <div className="itemContainer">
                 <div className="outerComputerCircle">
                   <div className="innerComputerCircle"></div>
@@ -28,7 +28,7 @@ export default function ResultsInterface() {
               </div>
               <p className="itemPickedText">THE HOUSE PICKED</p>
 
-              <div className="computerResultsRingContainer ringsOff">
+              <div className="resultsRingsContainer computerResultsRingContainer ringsOff">
                 <div className="playerResultsRings playerResultsOuterRing"></div>
                 <div className="playerResultsRings playerResultsMidRing"></div>
                 <div className="playerResultsRings playerResultsInnerRing"></div> 

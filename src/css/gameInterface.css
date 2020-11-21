@@ -12,10 +12,7 @@
   position: relative;
 }
 
-.playerPickContainer {
-  position: relative;
-}
-
+.playerPickContainer,
 .computerPickContainer {
   position: relative;
 }
@@ -41,24 +38,21 @@
   padding-top: 32px;
 }
 
-.playerResultsRingContainer {
+.resultsRingsContainer {
   width: 300px;
   height: 300px;
   position: absolute;
   border-radius: 50%;
-  top: -84px;
-  left: -84px;
   z-index: -10;
+  top: -84px;
+}
+
+.playerResultsRingContainer {
+  left: -84px;
 }
 
 .computerResultsRingContainer {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  border-radius: 50%;
-  top: -84px;
   right: -84px;
-  z-index: -10;
 }
 
 .ringsOff {
@@ -116,48 +110,34 @@
     width: 204px;
   }
 
-  .playerResultsRingContainer {
+  .resultsRingsContainer {
     width: 600px;
     height: 600px;
     top: -78%;
-    left: 50%;
     transform: translateX(-50%);
   }
 
-  .computerResultsRingContainer {
-    width: 600px;
-    height: 600px;
-    top: -78%;
-    right: 50%;
-    transform: translateX(50%);
+  .playerResultsRingContainer {
+    left: 50%;
   }
 
-  .playerResultsRings {
-    background-color: var(--HeaderOutline);
-    opacity: .1;
-    position: absolute;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .computerResultsRingContainer {
+    right: 50%;
   }
   
   .playerResultsOuterRing {
     width: 584px;
     height: 584px;
-    z-index: -9;
   }
   
   .playerResultsMidRing {
     width: 450px;
     height: 450px;
-    z-index: -8;
   }
   
   .playerResultsInnerRing {
     width: 300px;
     height: 300px;
-    z-index: -7;
   }
 }
 
@@ -170,29 +150,21 @@
     padding: 0;
   }
 
-  .playerPickContainer {
+  .playersPickContainer {
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  
-  .computerPickContainer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(50%);
     display: flex;
     flex-direction: column-reverse;
   }
 
-  .itemContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  .playerPickContainer {
+    left: 0;
+    transform: translateX(-50%);
+  }
+  
+  .computerPickContainer {
+    right: 0;
+    transform: translateX(50%);
   }
 
   .itemPickedText {
@@ -202,13 +174,15 @@
     letter-spacing: 2px;
   }
 
-  .playerResultsRingContainer {
+  .resultsRingsContainer {
     top: -36%;
+  }
+
+  .playerResultsRingContainer {
     left: 50%;
   }
 
   .computerResultsRingContainer {
-    top: -36%;
     right: 50%;
   }
 }
