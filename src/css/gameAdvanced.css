@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.outerCirclePress {
+.outerCirclePressAdv {
   width: 96px;
   height: 96px;
 }
@@ -101,7 +101,7 @@
     box-shadow: inset 0 -6px 1px 1px rgba(0,0,0,0.3);
   }
 
-  .outerCirclePress {
+  .outerCirclePressAdv {
     width: 146px;
     height: 146px;
   }

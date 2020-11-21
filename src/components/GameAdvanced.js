@@ -12,28 +12,38 @@ export default function GameAdvanced(props) {
         <HeaderAdvanced state={props.state}/>
         <div className="gameContainer bgPentagon">
           <NavLink to="/gameplayAdvanced">
-            <div onMouseDown={()=>{props.pressButton('.paperCircle')}} onClick={()=>{props.playersPick('paper')}} className="outerCircleAdv outerCirclePos paperCircle paperCirclePosAdv">
+            <div onMouseDown={()=>{props.pressButton('.paperCircleAdv', 'outerCirclePressAdv')}} 
+                 onClick={()=>{props.playersPick('paper')}} 
+                 className="outerCircleAdv outerCirclePos paperCircle paperCircleAdv paperCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerPaperCircle"></div>
             </div>
           </NavLink>
 
           <NavLink to="/gameplayAdvanced">
-            <div onMouseDown={()=>{props.pressButton('.scissorsCircle')}} onClick={()=>{props.playersPick('scissor')}} className="outerCircleAdv outerCirclePos scissorsCircle scissorsCirclePosAdv">
+            <div onMouseDown={()=>{props.pressButton('.scissorsCircleAdv', 'outerCirclePressAdv')}} 
+                 onClick={()=>{props.playersPick('scissor')}} 
+                 className="outerCircleAdv outerCirclePos scissorsCircle scissorsCircleAdv scissorsCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerScissorCircle"></div>
             </div>
           </NavLink>
           <NavLink to="/gameplayAdvanced">
-            <div onMouseDown={()=>{props.pressButton('.rockCircle')}} onClick={()=>{props.playersPick('rock')}} className="outerCircleAdv outerCirclePos rockCircle rockCirclePosAdv">
+            <div onMouseDown={()=>{props.pressButton('.rockCircleAdv', 'outerCirclePressAdv')}} 
+                 onClick={()=>{props.playersPick('rock')}} 
+                 className="outerCircleAdv outerCirclePos rockCircle rockCircleAdv rockCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerRockCircle"></div>
             </div>
           </NavLink>
           <NavLink to="/gameplayAdvanced">
-            <div onMouseDown={()=>{props.pressButton('.lizardCircleAdv')}} onClick={()=>{props.playersPick('lizard')}} className="outerCircleAdv outerCirclePos lizardCircleAdv lizardCirclePosAdv">
+            <div onMouseDown={()=>{props.pressButton('.lizardCircleAdv', 'outerCirclePressAdv')}} 
+                 onClick={()=>{props.playersPick('lizard')}} 
+                 className="outerCircleAdv outerCirclePos lizardCircleAdv lizardCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerLizardCircleAdv"></div>
             </div>
           </NavLink>
           <NavLink to="/gameplayAdvanced">
-            <div onMouseDown={()=>{props.pressButton('.spockCircleAdv')}} onClick={()=>{props.playersPick('spock')}} className="outerCircleAdv outerCirclePos spockCircleAdv spockCirclePosAdv">
+            <div onMouseDown={()=>{props.pressButton('.spockCircleAdv', 'outerCirclePressAdv')}} 
+                 onClick={()=>{props.playersPick('spock')}} 
+                 className="outerCircleAdv outerCirclePos spockCircleAdv spockCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerSpockCircleAdv"></div>
             </div>
           </NavLink>

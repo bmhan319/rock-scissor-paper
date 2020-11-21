@@ -12,18 +12,24 @@ export default function GameNormal(props) {
         <Header state={props.state}/>
         <div className="gameContainer bgTriangle">
           <NavLink to="/gameplay">
-            <div onMouseDown={()=>{props.pressButton('.paperCircle')}} onClick={()=>{props.playersPick('paper')}} className="outerCircle outerCirclePos paperCircle paperCirclePos">
+            <div onMouseDown={()=>{props.pressButton('.paperCircle', 'outerCirclePress')}} 
+                 onClick={()=>{props.playersPick('paper')}} 
+                 className="outerCircle outerCirclePos paperCircle paperCirclePos">
               <div className="innerCircle innerPaperCircle"></div>
             </div>
           </NavLink>
 
           <NavLink to="/gameplay">
-            <div onMouseDown={()=>{props.pressButton('.scissorsCircle')}} onClick={()=>{props.playersPick('scissor')}} className="outerCircle outerCirclePos scissorsCircle scissorsCirclePos">
+            <div onMouseDown={()=>{props.pressButton('.scissorsCircle', 'outerCirclePress')}} 
+                 onClick={()=>{props.playersPick('scissor')}} 
+                 className="outerCircle outerCirclePos scissorsCircle scissorsCirclePos">
               <div className="innerCircle innerScissorCircle"></div>
             </div>
           </NavLink>
           <NavLink to="/gameplay">
-            <div onMouseDown={()=>{props.pressButton('.rockCircle')}} onClick={()=>{props.playersPick('rock')}} className="outerCircle outerCirclePos rockCircle rockCirclePos">
+            <div onMouseDown={()=>{props.pressButton('.rockCircle', 'outerCirclePress')}} 
+                 onClick={()=>{props.playersPick('rock')}} 
+                 className="outerCircle outerCirclePos rockCircle rockCirclePos">
               <div className="innerCircle innerRockCircle"></div>
             </div>
           </NavLink>
