@@ -18,15 +18,15 @@
   background-image: linear-gradient(var(--SpockGradient1), var(--SpockGradient2));
 }
 
-.paperCirclePosAdv {
-  top: 80px;
-  right: 30px;
-}
-
 .scissorsCirclePosAdv {
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.paperCirclePosAdv {
+  top: 80px;
+  right: 30px;
 }
 
 .rockCirclePosAdv {
@@ -56,4 +56,73 @@
 
 .innerSpockCircleAdv {
   background-image: url('../img/icon-spock.svg');
+}
+
+@media (min-width: 440px) { 
+  .scissorsCirclePosAdv {
+    top: -10px;
+  }
+  
+  .paperCirclePosAdv {
+    top: 70px;
+    right: 50px;
+  }
+  
+  .rockCirclePosAdv {
+    bottom: 0;
+    right: 100px;
+  }
+  
+  .lizardCirclePosAdv {
+    bottom: 0;
+    left: 100px;
+  }
+  
+  .spockCirclePosAdv {
+    top: 70px;
+    left: 50px;
+  }
+}
+
+
+@media (min-width: 780px) {
+  .bgPentagon {
+    background-size: contain;
+  }
+
+  .outerCircleAdv {
+    width: 148px;
+    height: 148px;
+    box-shadow: inset 0 -6px 1px 1px rgba(0,0,0,0.3);
+  }
+
+  .scissorsCirclePosAdv {
+    top: -90px;
+  }
+
+  .paperCirclePosAdv {
+    top: 30px;
+    right: 100px;
+  }
+  
+  .rockCirclePosAdv {
+    bottom: -80px;
+    right: 170px;
+  }
+  
+  .lizardCirclePosAdv {
+    bottom: -80px;
+    left: 170px;
+  }
+  
+  .spockCirclePosAdv {
+    top: 30px;
+    left: 100px;
+  }
+
+  .innerCircleAdv {
+    width: 112px;
+    height: 112px;
+    box-shadow: inset 0 5px 2px 1px #c8c8c8;
+  }
 }
