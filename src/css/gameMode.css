@@ -10,9 +10,22 @@
 .mode {
   color: #fff;
   font-size: .75em;
-  border-bottom: 1px solid #fff;
 }
 
 .modeNormal {
   margin-right: 8px;
+}
+
+@media (min-width: 400px) {
+  .modeComponent {
+    width: 700px;
+    max-width: 1355px;
+    height: 46px;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .mode { 
+    font-size: 1em;
+  }
 }

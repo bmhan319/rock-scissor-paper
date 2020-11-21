@@ -47,3 +47,38 @@
   font-weight: 700;
   line-height: 36px;
 }
+
+@media (min-width: 400px) {
+  .scoreHeader {
+    width: 700px;
+    max-width: 1355px;
+    margin: 0 auto;
+    border-radius: 16px;
+  }
+
+  .scoreHeaderTextContainer {
+    padding: 24px 32px;
+  }
+
+  .scoreHeaderText {
+    line-height: 32px;
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+
+  .scoreHeaderScoreContainer {
+    border-radius: 10px;
+    margin: 0 32px;
+    padding: 16px 40px;
+  }
+  
+  .scoreHeaderScoreTitle {
+    font-size: 1em;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+  
+  .scoreHeaderScore {
+    font-size: 3.5em;
+  }
+}
