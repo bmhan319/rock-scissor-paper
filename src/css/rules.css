@@ -22,6 +22,14 @@
   color: var(--RockGradient1);
   border: 2px solid var(--RockGradient1);
 }
+.rulesButton:focus:hover {
+  box-shadow: 0 0 3pt 2pt var(--RockGradient1);
+}
+
+.rulesButton:focus {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--HeaderOutline);
+}
 
 @media (min-width: 400px) {
   .rulesComponent {

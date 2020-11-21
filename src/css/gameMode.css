@@ -16,6 +16,15 @@
   color: var(--RockGradient1);
 }
 
+.mode:hover:focus {
+  color: var(--RockGradient1);
+  outline: 2px solid var(--RockGradient1);
+}
+
+.mode:focus {
+  outline: 2px solid var(--HeaderOutline);
+}
+
 .modeNormal {
   margin-right: 8px;
 }

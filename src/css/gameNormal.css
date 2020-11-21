@@ -25,6 +25,11 @@
   height: 130px;
 }
 
+.outerCircle:focus {
+  outline: none;
+  box-shadow: 0 0 3pt 2pt var(--HeaderOutline);
+}
+
 .outerCirclePos {
   position: absolute;
 }

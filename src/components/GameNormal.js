@@ -11,23 +11,26 @@ export default function GameNormal(props) {
       <div className="ModalWrapper ModalWrapperOff">
         <Header state={props.state}/>
         <div className="gameContainer bgTriangle">
-          <NavLink to="/gameplay">
-            <div onMouseDown={()=>{props.pressButton('.paperCircle', 'outerCirclePress')}} 
+          <NavLink tabIndex="-1" to="/gameplay">
+            <div tabIndex="0"
+                 onMouseDown={()=>{props.pressButton('.paperCircle', 'outerCirclePress')}} 
                  onClick={()=>{props.playersPick('paper')}} 
                  className="outerCircle outerCirclePos paperCircle paperCirclePos">
               <div className="innerCircle innerPaperCircle"></div>
             </div>
           </NavLink>
 
-          <NavLink to="/gameplay">
-            <div onMouseDown={()=>{props.pressButton('.scissorsCircle', 'outerCirclePress')}} 
+          <NavLink tabIndex="-1" to="/gameplay">
+            <div tabIndex="0"
+                 onMouseDown={()=>{props.pressButton('.scissorsCircle', 'outerCirclePress')}} 
                  onClick={()=>{props.playersPick('scissor')}} 
                  className="outerCircle outerCirclePos scissorsCircle scissorsCirclePos">
               <div className="innerCircle innerScissorCircle"></div>
             </div>
           </NavLink>
-          <NavLink to="/gameplay">
-            <div onMouseDown={()=>{props.pressButton('.rockCircle', 'outerCirclePress')}} 
+          <NavLink tabIndex="-1" to="/gameplay">
+            <div tabIndex="0"
+                 onMouseDown={()=>{props.pressButton('.rockCircle', 'outerCirclePress')}} 
                  onClick={()=>{props.playersPick('rock')}} 
                  className="outerCircle outerCirclePos rockCircle rockCirclePos">
               <div className="innerCircle innerRockCircle"></div>
