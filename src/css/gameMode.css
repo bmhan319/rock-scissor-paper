@@ -12,6 +12,10 @@
   font-size: .75em;
 }
 
+.mode:hover {
+  color: var(--RockGradient1);
+}
+
 .modeNormal {
   margin-right: 8px;
 }
