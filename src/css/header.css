@@ -48,13 +48,40 @@
   line-height: 36px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 440px) {
   .scoreHeader {
-    width: 100%;
-    margin: 0 auto;
+    width: auto;
+    margin: 0 24px;
     border-radius: 16px;
   }
 
+  .scoreHeaderTextContainer {
+    padding: 16px 24px;
+  }
+
+  .scoreHeaderText {
+    line-height: 24px;
+    font-size: 1.9em;
+  }
+
+  .scoreHeaderScoreContainer {
+    border-radius: 10px;
+    margin: 0 24px;
+    padding: 8px 24px;
+  }
+  
+  .scoreHeaderScoreTitle {
+    font-size: .85em;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  
+  .scoreHeaderScore {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 780px) {
   .scoreHeaderTextContainer {
     padding: 24px 32px;
   }
@@ -62,11 +89,9 @@
   .scoreHeaderText {
     line-height: 32px;
     font-size: 2.5em;
-    font-weight: 600;
   }
 
   .scoreHeaderScoreContainer {
-    border-radius: 10px;
     margin: 0 32px;
     padding: 16px 40px;
   }

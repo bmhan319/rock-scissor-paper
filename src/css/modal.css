@@ -53,7 +53,7 @@
   width: 40px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 440px) {
   .modalComponent {
     position: fixed;
     top: 50%;

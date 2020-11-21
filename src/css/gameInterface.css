@@ -27,7 +27,12 @@
   position: relative;
 }
 
-
+.outerComputerCircle {
+  height: 132px;
+  width: 132px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.1);
+}
 
 .itemPickedText {
   color: #fff;
@@ -91,7 +96,70 @@
   z-index: -7;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 440px) {
+  .gamePlayOuterContainer {
+    margin: 64px auto 0;
+    width: 440px;
+  }
+}
+
+@media (min-width: 780px) {
+  .gamePlayOuterContainer {
+    margin: 90px 0 0 0;
+    width: 100%;
+  }
+
+  .outerComputerCircle {
+    height: 204px;
+    width: 204px;
+  }
+
+  .playerResultsRingContainer {
+    width: 600px;
+    height: 600px;
+    top: -78%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .computerResultsRingContainer {
+    width: 600px;
+    height: 600px;
+    top: -78%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .playerResultsRings {
+    background-color: var(--HeaderOutline);
+    opacity: .1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .playerResultsOuterRing {
+    width: 584px;
+    height: 584px;
+    z-index: -9;
+  }
+  
+  .playerResultsMidRing {
+    width: 450px;
+    height: 450px;
+    z-index: -8;
+  }
+  
+  .playerResultsInnerRing {
+    width: 300px;
+    height: 300px;
+    z-index: -7;
+  }
+}
+
+@media (min-width: 950px) {
   .gamePlayOuterContainer {
     margin-top: 80px;
   }
@@ -133,46 +201,12 @@
   }
 
   .playerResultsRingContainer {
-    width: 600px;
-    height: 600px;
     top: -36%;
     left: 50%;
-    transform: translateX(-50%);
   }
 
   .computerResultsRingContainer {
-    width: 600px;
-    height: 600px;
     top: -36%;
     right: 50%;
-    transform: translateX(50%);
-  }
-
-  .playerResultsRings {
-    background-color: var(--HeaderOutline);
-    opacity: .1;
-    position: absolute;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .playerResultsOuterRing {
-    width: 584px;
-    height: 584px;
-    z-index: -9;
-  }
-  
-  .playerResultsMidRing {
-    width: 450px;
-    height: 450px;
-    z-index: -8;
-  }
-  
-  .playerResultsInnerRing {
-    width: 300px;
-    height: 300px;
-    z-index: -7;
   }
 }
