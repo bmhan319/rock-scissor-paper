@@ -114,15 +114,16 @@
     width: 600px;
     height: 600px;
     top: -78%;
-    transform: translateX(-50%);
   }
 
   .playerResultsRingContainer {
     left: 50%;
+    transform: translateX(-50%);
   }
 
   .computerResultsRingContainer {
     right: 50%;
+    transform: translateX(50%);
   }
   
   .playerResultsOuterRing {
@@ -176,13 +177,5 @@
 
   .resultsRingsContainer {
     top: -36%;
-  }
-
-  .playerResultsRingContainer {
-    left: 50%;
-  }
-
-  .computerResultsRingContainer {
-    right: 50%;
   }
 }
