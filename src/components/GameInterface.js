@@ -27,6 +27,12 @@ export default function ResultsInterface() {
                 </div>
               </div>
               <p className="itemPickedText">THE HOUSE PICKED</p>
+
+              <div className="computerResultsRingContainer ringsOff">
+                <div className="playerResultsRings playerResultsOuterRing"></div>
+                <div className="playerResultsRings playerResultsMidRing"></div>
+                <div className="playerResultsRings playerResultsInnerRing"></div> 
+              </div>
             </div>
           </div>
         </div>

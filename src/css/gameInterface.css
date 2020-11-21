@@ -45,6 +45,16 @@
   z-index: -10;
 }
 
+.computerResultsRingContainer {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 50%;
+  top: -84px;
+  right: -84px;
+  z-index: -10;
+}
+
 .ringsOff {
   opacity: 0;
 }
@@ -125,12 +135,17 @@
   .playerResultsRingContainer {
     width: 600px;
     height: 600px;
-    position: absolute;
-    border-radius: 50%;
     top: -36%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: -10;
+  }
+
+  .computerResultsRingContainer {
+    width: 600px;
+    height: 600px;
+    top: -36%;
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .playerResultsRings {

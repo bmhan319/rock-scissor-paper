@@ -146,8 +146,6 @@ export default class App extends Component {
 
   //Determining the winner
   findWinner = () => {
-    document.querySelector('.playerResultsRingContainer').classList.remove('ringsOff')
-    document.querySelector('.playerResultsRingContainer').classList.add('ringsOn')
     document.querySelector('.resultsContainer').classList.remove('resultsHide')
     document.querySelector('.resultsContainer').classList.add('resultsShow')
     if (  (this.state.playerPick === "paper" && (this.state.computerPick === "scissor" || this.state.computerPick === "lizard") ) ||
@@ -159,6 +157,8 @@ export default class App extends Component {
         score: this.state.score - 1,
         status: "YOU LOSE"
       })
+      document.querySelector('.computerResultsRingContainer').classList.remove('ringsOff')
+      document.querySelector('.computerResultsRingContainer').classList.add('ringsOn')
     } else if ( (this.state.playerPick === "paper" && (this.state.computerPick === "rock" || this.state.computerPick === "spock") ) ||
                 (this.state.playerPick === "scissor" && (this.state.computerPick === "paper" || this.state.computerPick === "lizard") ) ||
                 (this.state.playerPick === "rock" && (this.state.computerPick === "lizard"|| this.state.computerPick === "scissor") ) || 
@@ -168,6 +168,8 @@ export default class App extends Component {
         score: this.state.score + 1,
         status: "YOU WIN"
       })
+      document.querySelector('.playerResultsRingContainer').classList.remove('ringsOff')
+      document.querySelector('.playerResultsRingContainer').classList.add('ringsOn')
     } else {
       this.setState({
         status: "IT'S A TIE"
