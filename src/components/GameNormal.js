@@ -8,26 +8,28 @@ export default function GameNormal(props) {
   return (
     <div className="gameComponent">
       <Modal modal={props.modal} />
-      <Header state={props.state}/>
-      <div className="gameContainer bgTriangle">
-        <NavLink to="/gameplay">
-          <div onClick={()=>{props.playerPick('paper')}} className="outerCircle outerCirclePos paperCircle paperCirclePos">
-            <div className="innerCircle innerPaperCircle"></div>
-          </div>
-        </NavLink>
+      <div className="ModalWrapper ModalWrapperOff">
+        <Header state={props.state}/>
+        <div className="gameContainer bgTriangle">
+          <NavLink to="/gameplay">
+            <div onClick={()=>{props.playerPick('paper')}} className="outerCircle outerCirclePos paperCircle paperCirclePos">
+              <div className="innerCircle innerPaperCircle"></div>
+            </div>
+          </NavLink>
 
-        <NavLink to="/gameplay">
-          <div onClick={()=>{props.playerPick('scissor')}} className="outerCircle outerCirclePos scissorsCircle scissorsCirclePos">
-            <div className="innerCircle innerScissorCircle"></div>
-          </div>
-        </NavLink>
-        <NavLink to="/gameplay">
-          <div onClick={()=>{props.playerPick('rock')}} className="outerCircle outerCirclePos rockCircle rockCirclePos">
-            <div className="innerCircle innerRockCircle"></div>
-          </div>
-        </NavLink>
+          <NavLink to="/gameplay">
+            <div onClick={()=>{props.playerPick('scissor')}} className="outerCircle outerCirclePos scissorsCircle scissorsCirclePos">
+              <div className="innerCircle innerScissorCircle"></div>
+            </div>
+          </NavLink>
+          <NavLink to="/gameplay">
+            <div onClick={()=>{props.playerPick('rock')}} className="outerCircle outerCirclePos rockCircle rockCirclePos">
+              <div className="innerCircle innerRockCircle"></div>
+            </div>
+          </NavLink>
+        </div>
+        <Rules modal={props.modal} />
       </div>
-      <Rules modal={props.modal} />
     </div>
   )
 }

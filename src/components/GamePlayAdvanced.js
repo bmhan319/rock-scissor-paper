@@ -14,19 +14,21 @@ export default class GamePlay extends Component {
     return (
       <div className="gamePlayComponent">
         <ModalAdvanced modal={this.props.modal} />
-        <HeaderAdvanced state={this.props.state}/>
-        <GameInterface state={this.props.state}/>
-        <div className="resultsContainer resultsHide">
-          <div className="winnerContainer">
-            <h2 className="whoWon">{this.props.state.status}</h2>
+        <div className="ModalWrapper ModalWrapperOff">
+          <HeaderAdvanced state={this.props.state}/>
+          <GameInterface state={this.props.state}/>
+          <div className="resultsContainer resultsHide">
+            <div className="winnerContainer">
+              <h2 className="whoWon">{this.props.state.status}</h2>
+            </div>
+            <div className="playAgainContainer">
+              <NavLink to="/advancedMode">
+                <button className="playAgain" type="button">PLAY AGAIN</button>
+              </NavLink>
+            </div>
           </div>
-          <div className="playAgainContainer">
-            <NavLink to="/advancedMode">
-              <button className="playAgain" type="button">PLAY AGAIN</button>
-            </NavLink>
-          </div>
+          <Rules modal={this.props.modal} />
         </div>
-        <Rules modal={this.props.modal} />
       </div>
     )
   }

@@ -53,6 +53,16 @@
   width: 40px;
 }
 
+.ModalWrapperOn {
+  opacity: .1;
+  pointer-events: none;
+}
+
+.ModalWrapperOff {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media (min-width: 440px) {
   .modalComponent {
     position: fixed;

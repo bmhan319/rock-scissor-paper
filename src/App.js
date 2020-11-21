@@ -28,15 +28,25 @@ export default class App extends Component {
   // Opens and closes the Rules modal
   modal = () => {
     const modal = document.querySelector('.modalComponent')
+    const wrapper = document.querySelector('.ModalWrapper')
+    const mode = document.querySelector('.modeComponent')
     if (this.state.modalOpen === false) {
       modal.classList.remove('modalClose')
       modal.classList.add('modalOpen')
+      wrapper.classList.remove('ModalWrapperOff')
+      wrapper.classList.add('ModalWrapperOn')
+      mode.classList.remove('ModalWrapperOff')
+      mode.classList.add('ModalWrapperOn')
       this.setState({
         modalOpen: true
       })
     } else {
       modal.classList.remove('modalOpen')
       modal.classList.add('modalClose')
+      wrapper.classList.remove('ModalWrapperOn')
+      wrapper.classList.add('ModalWrapperOff')
+      mode.classList.remove('ModalWrapperOn')
+      mode.classList.add('ModalWrapperOff')
       this.setState({
         modalOpen: false
       })
