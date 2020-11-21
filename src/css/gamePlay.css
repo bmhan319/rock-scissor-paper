@@ -53,3 +53,15 @@
     margin-top: 122px;
   }
 }
+
+@media (min-width: 780px) {
+  .resultsContainer {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 950px) {
+  .resultsContainer {
+    margin-top: 120px;
+  }
+}
