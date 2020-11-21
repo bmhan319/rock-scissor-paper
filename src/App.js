@@ -25,7 +25,7 @@ export default class App extends Component {
     gameMode: 3
   }
 
-  // Opens and closes the Rules modal
+  // Opens and closes the 'Rules' modal
   modal = () => {
     const modal = document.querySelector('.modalComponent')
     const wrapper = document.querySelector('.ModalWrapper')
@@ -60,14 +60,15 @@ export default class App extends Component {
     })
   }
 
-  //Records player and computers chosen items into state 
-  playerPick = (item) => {
+  //Records player and computer's chosen items into state 
+  playersPick = (item) => {
     //Randomly picks a number between 1 and 3 (or 5 if in advanced mode)
     let value = Math.floor((Math.random() * this.state.gameMode) + 1)
     
     //This sets player's item into state
     this.setState({playerPick: item})
 
+    //Determines computers item based on the random number picked earlier in the function.
     switch (value) {
       default:
         this.setState({computerPick: ''})
@@ -92,12 +93,16 @@ export default class App extends Component {
 
   //Loading player's pick to the interface
   loadPlayerMove = () => {
+    //places default placeholder circle on the game interface
     document.querySelector('.outerPlayerCircle').classList.add('outerCircle')
     document.querySelector('.innerPlayerCircle').classList.add('innerCircle')
+    //determines players interface styling based on their chosen item
+    //outer circle dictates color
+    //inner circle determines icon
     switch (this.state.playerPick) {
       default:
-        document.querySelector('.outerPlayerCircle').classList.add('')
-        document.querySelector('.innerPlayerCircle').classList.add('')
+        document.querySelector('.outerPlayerCircle').classList.add('outerCircle')
+        document.querySelector('.innerPlayerCircle').classList.add('innerCircle')
         break
       case 'paper':
         document.querySelector('.outerPlayerCircle').classList.add('paperCircle')
@@ -124,12 +129,16 @@ export default class App extends Component {
 
   //Loading computer's pick to the interface
   loadComputerMove = () => {
+    //places default placeholder circle on the game interface
     document.querySelector('.outerComputerCircle').classList.add('outerCircle')
     document.querySelector('.innerComputerCircle').classList.add('innerCircle')
+    //determines computers interface styling based on their chosen item
+    //outer circle dictates color
+    //inner circle determines icon
     switch (this.state.computerPick) {
       default:
-        document.querySelector('.outerComputerCircle').classList.add('')
-        document.querySelector('.innerComputerCircle').classList.add('')
+        document.querySelector('.outerComputerCircle').classList.add('outerCircle')
+        document.querySelector('.innerComputerCircle').classList.add('innerCircle')
         break
       case 'paper':
         document.querySelector('.outerComputerCircle').classList.add('paperCircle')
@@ -156,8 +165,11 @@ export default class App extends Component {
 
   //Determining the winner
   findWinner = () => {
+    //Turns on the results message container
     document.querySelector('.resultsContainer').classList.remove('resultsHide')
     document.querySelector('.resultsContainer').classList.add('resultsShow')
+
+    //Logic in determining whether player loses
     if (  (this.state.playerPick === "paper" && (this.state.computerPick === "scissor" || this.state.computerPick === "lizard") ) ||
           (this.state.playerPick === "scissor" && (this.state.computerPick === "spock" || this.state.computerPick === "rock") ) ||
           (this.state.playerPick === "rock" && (this.state.computerPick === "paper" || this.state.computerPick === "spock") ) ||
@@ -167,8 +179,10 @@ export default class App extends Component {
         score: this.state.score - 1,
         status: "YOU LOSE"
       })
+      //Turns on the winner spotlight for computer
       document.querySelector('.computerResultsRingContainer').classList.remove('ringsOff')
       document.querySelector('.computerResultsRingContainer').classList.add('ringsOn')
+      //Logic in determining whether player wins
     } else if ( (this.state.playerPick === "paper" && (this.state.computerPick === "rock" || this.state.computerPick === "spock") ) ||
                 (this.state.playerPick === "scissor" && (this.state.computerPick === "paper" || this.state.computerPick === "lizard") ) ||
                 (this.state.playerPick === "rock" && (this.state.computerPick === "lizard"|| this.state.computerPick === "scissor") ) || 
@@ -178,9 +192,11 @@ export default class App extends Component {
         score: this.state.score + 1,
         status: "YOU WIN"
       })
+      //Turns on the winner spotlight for player
       document.querySelector('.playerResultsRingContainer').classList.remove('ringsOff')
       document.querySelector('.playerResultsRingContainer').classList.add('ringsOn')
     } else {
+      //Logic in determining a tie
       this.setState({
         status: "IT'S A TIE"
       })
@@ -189,9 +205,9 @@ export default class App extends Component {
 
   //Settings for the timing on how the game plays out after player picks item
   loadItems = () => {
-    this.loadPlayerMove()
-    setTimeout( this.loadComputerMove,500 )
-    setTimeout( this.findWinner, 1000)
+    setTimeout( this.loadPlayerMove,500 )     //Places players chosen item to interface after .5s delay
+    setTimeout( this.loadComputerMove,500 )   //Places computers chosen item to interface after .5s delay
+    setTimeout( this.findWinner, 1000)        //Determines winner after another .5s delay
   }
 
   render() {
@@ -202,21 +218,15 @@ export default class App extends Component {
           <Switch>
             <Route exact path='/' render={()=> <GameNormal state={this.state}
                                                            modal={this.modal}
-                                                           playerPick={this.playerPick} />}/>
+                                                           playersPick={this.playersPick} />}/>
             <Route exact path='/advancedMode' render={()=> <GameAdvanced state={this.state}
                                                                          modal={this.modal} 
-                                                                         playerPick={this.playerPick} />}/>
+                                                                         playersPick={this.playersPick} />}/>
             <Route path='/gameplay' render={()=> <GamePlay  state={this.state}
                                                             modal={this.modal}
-                                                            findWinner={this.findWinner}
-                                                            loadPlayerMove={this.loadPlayerMove}
-                                                            loadComputerMove={this.loadComputerMove}
                                                             loadItems={this.loadItems} />}/>
             <Route path='/gameplayAdvanced' render={()=> <GamePlayAdvanced state={this.state}
                                                                            modal={this.modal}
-                                                                           findWinner={this.findWinner}
-                                                                           loadPlayerMove={this.loadPlayerMove}
-                                                                           loadComputerMove={this.loadComputerMove}
                                                                            loadItems={this.loadItems} />}/>
           </Switch>
         </div>

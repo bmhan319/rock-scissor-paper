@@ -12,28 +12,28 @@ export default function GameAdvanced(props) {
         <HeaderAdvanced state={props.state}/>
         <div className="gameContainer bgPentagon">
           <NavLink to="/gameplayAdvanced">
-            <div onClick={()=>{props.playerPick('paper')}} className="outerCircleAdv outerCirclePos paperCircle paperCirclePosAdv">
+            <div onClick={()=>{props.playersPick('paper')}} className="outerCircleAdv outerCirclePos paperCircle paperCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerPaperCircle"></div>
             </div>
           </NavLink>
 
           <NavLink to="/gameplayAdvanced">
-            <div onClick={()=>{props.playerPick('scissor')}} className="outerCircleAdv outerCirclePos scissorsCircle scissorsCirclePosAdv">
+            <div onClick={()=>{props.playersPick('scissor')}} className="outerCircleAdv outerCirclePos scissorsCircle scissorsCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerScissorCircle"></div>
             </div>
           </NavLink>
           <NavLink to="/gameplayAdvanced">
-            <div onClick={()=>{props.playerPick('rock')}} className="outerCircleAdv outerCirclePos rockCircle rockCirclePosAdv">
+            <div onClick={()=>{props.playersPick('rock')}} className="outerCircleAdv outerCirclePos rockCircle rockCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerRockCircle"></div>
             </div>
           </NavLink>
           <NavLink to="/gameplayAdvanced">
-            <div onClick={()=>{props.playerPick('lizard')}} className="outerCircleAdv outerCirclePos lizardCircleAdv lizardCirclePosAdv">
+            <div onClick={()=>{props.playersPick('lizard')}} className="outerCircleAdv outerCirclePos lizardCircleAdv lizardCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerLizardCircleAdv"></div>
             </div>
           </NavLink>
           <NavLink to="/gameplayAdvanced">
-            <div onClick={()=>{props.playerPick('spock')}} className="outerCircleAdv outerCirclePos spockCircleAdv spockCirclePosAdv">
+            <div onClick={()=>{props.playersPick('spock')}} className="outerCircleAdv outerCirclePos spockCircleAdv spockCirclePosAdv">
               <div className="innerCircle innerCircleAdv innerSpockCircleAdv"></div>
             </div>
           </NavLink>

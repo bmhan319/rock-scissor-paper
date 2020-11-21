@@ -27,6 +27,7 @@
   position: relative;
 }
 
+.outerPlayerCircle,
 .outerComputerCircle {
   height: 132px;
   width: 132px;
@@ -109,6 +110,7 @@
     width: 100%;
   }
 
+  .outerPlayerCircle,
   .outerComputerCircle {
     height: 204px;
     width: 204px;
