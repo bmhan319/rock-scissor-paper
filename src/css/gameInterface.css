@@ -27,12 +27,7 @@
   position: relative;
 }
 
-.outerComputerCircle {
-  height: 132px;
-  width: 132px;
-  border-radius: 50%;
-  background-color: rgba(0,0,0,.1);
-}
+
 
 .itemPickedText {
   color: #fff;
@@ -84,4 +79,85 @@
   width: 162px;
   height: 162px;
   z-index: -7;
+}
+
+@media (min-width: 400px) {
+  .gamePlayOuterContainer {
+    margin-top: 80px;
+  }
+
+  .gamePlayContainer {
+    padding: 0;
+  }
+
+  .playerPickContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .computerPickContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50%);
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .itemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .itemPickedText {
+    padding-top: 0;
+    margin: 0 0 60px 0;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+  }
+
+  .playerResultsRingContainer {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    border-radius: 50%;
+    top: -36%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -10;
+  }
+
+  .playerResultsRings {
+    background-color: var(--HeaderOutline);
+    opacity: .1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .playerResultsOuterRing {
+    width: 584px;
+    height: 584px;
+    z-index: -9;
+  }
+  
+  .playerResultsMidRing {
+    width: 450px;
+    height: 450px;
+    z-index: -8;
+  }
+  
+  .playerResultsInnerRing {
+    width: 300px;
+    height: 300px;
+    z-index: -7;
+  }
 }

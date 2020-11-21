@@ -50,8 +50,7 @@
 
 @media (min-width: 400px) {
   .scoreHeader {
-    width: 700px;
-    max-width: 1355px;
+    width: 100%;
     margin: 0 auto;
     border-radius: 16px;
   }

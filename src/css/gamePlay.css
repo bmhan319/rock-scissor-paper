@@ -1,5 +1,6 @@
 .resultsContainer {
   margin-top: 60px;
+  position: relative;
 }
 
 .resultsHide {
@@ -35,4 +36,20 @@
   letter-spacing: 1px;
   color: var(--DarkText);
   cursor: pointer;
+}
+
+.playAgain:hover {
+  color: var(--RockGradient1);
+}
+
+@media (min-width: 400px) {
+  .gamePlayComponent {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .resultsContainer {
+    margin-top: 122px;
+  }
 }
