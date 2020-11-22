@@ -1,128 +1,25 @@
-.gameContainer {
-  margin-top: 90px;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: center;
-  width: 100%;
-  height: 300px;
-  position: relative;
-}
+<NavLink tabIndex="0" to="/gameplay" className="outerCircleLink">11
+            <div tabIndex="-1"
+                 onMouseDown={()=>{props.pressButton('.paperCircle', 'outerCirclePress')}} 
+                 onClick={()=>{props.playersPick('paper')}} 
+                 className="outerCircle outerCirclePos paperCircle paperCirclePos">
+              <div className="innerCircle innerPaperCircle"></div>
+            </div>
+          </NavLink>
 
-.bgTriangle {
-  background-image: url('../img/bg-triangle.svg');
-}
-
-.outerCircle {
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-  box-shadow: inset 0 -4px 1px 1px rgba(0,0,0,0.3);
-  display: flex;
-}
-
-.outerCirclePos {
-  position: absolute;
-}
-
-.paperCircle {
-  background-image: linear-gradient(var(--PaperGradient1), var(--PaperGradient2));
-}
-
-.scissorsCircle {
-  background-image: linear-gradient(var(--ScissorsGradient1), var(--ScissorsGradient2));
-}
-
-.rockCircle {
-  background-image: linear-gradient(var(--RockGradient1), var(--RockGradient2));
-}
-
-.paperCirclePos {
-  top: 0;
-  left: 32px;
-}
-
-.scissorsCirclePos {
-  top: 0;
-  right: 32px;
-}
-
-.rockCirclePos {
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.innerCircle {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  border-radius: 50%;
-  margin: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 43%;
-  box-shadow: inset 0 3px 2px 2px #c8c8c8;
-}
-
-.innerPaperCircle {
-  background-image: url('../img/icon-paper.svg');
-}
-
-.innerScissorCircle {
-  background-image: url('../img/icon-scissors.svg');
-}
-
-.innerRockCircle {
-  background-image: url('../img/icon-rock.svg');
-}
-
-@media (min-width: 440px) {
-  .gameComponent {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .gameContainer {
-    margin: 162px auto 0;
-    width: 100%;
-    max-width: 440px;
-    height: 300px;
-  }
-}
-
-@media (min-width: 780px) {
-  .gameComponent {
-    max-width: 700px;
-  }
-
-  .gameContainer {
-    max-width: auto;
-  }
-
-  .outerCircle {
-    width: 204px;
-    height: 204px;
-    box-shadow: inset 0 -8px 1px 1px rgba(0,0,0,0.3);
-  }
-
-  .paperCirclePos {
-    top: -96px;
-    left: 86px;
-  }
-  
-  .scissorsCirclePos {
-    top: -96px;
-    right: 116px;
-  }
-  
-  .rockCirclePos {
-    bottom: -35px;
-  }
-
-  .innerCircle {
-    width: 152px;
-    height: 152px;
-    box-shadow: inset 0 6px 2px 1px #c8c8c8;
-  }
-}
+          <NavLink tabIndex="0" to="/gameplay" className="outerCircleLink">22
+            <div tabIndex="-1"
+                 onMouseDown={()=>{props.pressButton('.scissorsCircle', 'outerCirclePress')}} 
+                 onClick={()=>{props.playersPick('scissor')}} 
+                 className="outerCircle outerCirclePos scissorsCircle scissorsCirclePos">
+              <div className="innerCircle innerScissorCircle"></div>
+            </div>
+          </NavLink>
+          <NavLink tabIndex="0" to="/gameplay" className="outerCircleLink">33
+            <div tabIndex="-1"
+                 onMouseDown={()=>{props.pressButton('.rockCircle', 'outerCirclePress')}} 
+                 onClick={()=>{props.playersPick('rock')}} 
+                 className="outerCircle outerCirclePos rockCircle rockCirclePos">
+              <div className="innerCircle innerRockCircle"></div>
+            </div>
+          </NavLink>
