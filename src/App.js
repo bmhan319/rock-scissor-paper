@@ -211,7 +211,7 @@ export default class App extends Component {
 
   //Settings for the timing on how the game plays out after player picks item
   loadItems = () => {
-    setTimeout(this.loadPlayerMove, 500)     //Places players chosen item to interface after .5s delay
+    setTimeout(this.loadPlayerMove, 400)     //Places players chosen item to interface after .5s delay
     setTimeout(this.loadComputerMove, 500)   //Places computers chosen item to interface after .5s delay
     setTimeout(this.findWinner, 1000)        //Determines winner after another .5s delay
   }
