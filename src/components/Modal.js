@@ -4,7 +4,7 @@ import close from '../img/icon-close.svg'
 
 export default function Modal(props) {
   return (
-    <div className="modalComponent modalClose">
+    <div onClick={props.modal} className="modalComponent modalClose">
       <div className="modalContainer">
         <div className="modalTitleContainer">
           <h1 className="modalTitle">RULES</h1>
@@ -15,7 +15,7 @@ export default function Modal(props) {
         </div>
 
         <div className="modalCloseContainer" onClick={props.modal}>
-          <img onClick={props.modal} className="modalCloseIcon" src={close} alt="close" />
+          <img className="modalCloseIcon" src={close} alt="close" />
         </div>
       </div>
     </div>

@@ -16,11 +16,13 @@
 
 .modalOpen {
   opacity: 1;
+  cursor: pointer;
   pointer-events: auto;
 }
 
 .modalClose {
   opacity: 0;
+  cursor: none;
   pointer-events: none;
 }
 
